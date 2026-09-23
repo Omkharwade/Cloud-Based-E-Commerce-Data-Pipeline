@@ -21,19 +21,35 @@ The objective of this project is to build a reliable data pipeline that:
 - Provides business insights through Power BI
 
 ## Architecture
-
-E-Commerce Data
-        ↓
+```
+E-Commerce CSV Files
+        |
+        v
 Azure Data Factory
-        ↓
-ADLS Gen2
-        ↓
+(Ingestion & Orchestration)
+        |
+        v
+Azure Data Lake Storage Gen2
+        |
+        v
 Azure Databricks
-        ↓
-Bronze → Silver → Gold
-        ↓
+(PySpark + Delta Lake)
+        |
+   +----+----+
+   |         |
+   v         v
+Bronze    Data Quality
+   |       & Quarantine
+   v
+Silver
+   |
+   v
+Gold
+   |
+   v
 Power BI
-
+(Analytics Dashboard)
+```
 ## Technology Stack
 
 - Azure Data Factory
