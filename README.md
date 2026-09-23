@@ -110,7 +110,7 @@ Creates analytics-ready datasets such as:
 ## Incremental Processing
 
 An incremental processing demonstration was implemented using a watermark/timestamp approach to identify and process newly arriving records without reprocessing the complete dataset.
-
+```
 Detect New Data
         ↓
 Apply Watermark
@@ -118,17 +118,17 @@ Apply Watermark
 Process New Records
         ↓
 Update Target Tables
-
+```
 ## Pipeline Orchestration
 
 Azure Data Factory orchestrates the Databricks processing workflow:
-
+```
 Bronze Ingestion
         ↓
 Silver Transformation
         ↓
 Gold Analytics
-
+```
 ## Power BI Dashboard
 
 The final Gold datasets are used to build a Power BI dashboard containing:
@@ -156,8 +156,9 @@ Azure: Azure Data Factory, ADLS Gen2, Azure Databricks
 
 Analytics: SQL, Power BI
 
-##Author
+## Author
 
 Om Kharwade
+
 Aspiring Data Engineer
 
